@@ -1,0 +1,10 @@
+# Ignore Terraform state files and backups
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+terraform.tfvars.*
+
+# Ignore macOS files
+.DS_Store
+__MACOSX
