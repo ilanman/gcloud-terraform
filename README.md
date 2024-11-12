@@ -1,6 +1,11 @@
 # GCP Trading Algorithm Infrastructure with Terraform
 
-This project sets up the infrastructure required to deploy a Google Cloud Function for a trading algorithm using Google Cloud Platform (GCP) resources. The setup includes a Google Cloud Storage bucket to store the function source code and a Cloud Function that triggers HTTP requests to run the trading algorithm.
+This project sets up the infrastructure required to deploy a Google Cloud Function for a trading algorithm using Google Cloud Platform (GCP) resources. The setup includes a Google Cloud Storage bucket to store the function source code and a Cloud Function that triggers HTTP requests to run the trading algoriroject Structure
+
+- [Terraform Project overview](#terraform-project-overview)
+- [Github repo usage](#github-repo-usage)
+
+# Terraform Project overview
 
 ## Project Structure
 
@@ -12,7 +17,8 @@ This project sets up the infrastructure required to deploy a Google Cloud Functi
 ├── outputs.tf                   # Output definitions for Terraform
 ├── terraform.tfstate            # Terraform state file (generated)
 ├── terraform.tfstate.backup     # Terraform state backup file
-├── variables.tf                 # Variable definitions for project configuration
+├── terraform.tfvars.example     # To use for setting variable values (user defined)
+├── variabres.tf                 # Variable definitions for project configuration
 └── README.md                    # Project documentation
 ```
 
@@ -124,9 +130,7 @@ terraform destroy
 
 Confirm with `yes` to delete all resources.
 
-## How to use this repo for initializing a new Terraform project on GCP
-
-### Setup Instructions
+# Github repo usage
 
 1. **Clone the Repository**:
    ```bash
@@ -179,4 +183,5 @@ After cloning the repository, a new user would:
 ## License
 
 This project is licensed under the MIT License.
-```
+
+
