@@ -124,6 +124,58 @@ terraform destroy
 
 Confirm with `yes` to delete all resources.
 
+## How to use this repo for initializing a new Terraform project on GCP
+
+### Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/gcloud-trading-terraform.git
+   cd gcloud-trading-terraform
+   ```
+
+2. **Configure User-Specific Variables**:
+   - Copy `terraform.tfvars.example` to `terraform.tfvars`:
+     ```bash
+     cp terraform.tfvars.example terraform.tfvars
+     ```
+   - Open `terraform.tfvars` and update the values for:
+     - `project_id`: Your Google Cloud project ID
+     - `service_account_email`: The service account email for your Cloud Function
+     - `bucket_name`: The name of the storage bucket for your function code
+     - `source_zip_path`: Path to the source zip file on your local machine
+
+3. **Initialize and Apply Terraform**:
+   - Run `terraform init` to initialize the project and download provider plugins.
+   - Deploy the infrastructure with `terraform apply` and confirm with `yes`.
+
+4. Add `.gitignore` to Exclude `terraform.tfvars`
+
+Since `terraform.tfvars` will contain user-specific and possibly sensitive information, add it to `.gitignore` to prevent it from being accidentally committed:
+
+```plaintext
+# Ignore user-specific variable files
+terraform.tfvars
+```
+
+5. Push Changes to GitHub
+
+After making these changes, commit and push them to GitHub:
+
+```bash
+git add .
+git commit -m "Add user-specific variables setup"
+git push origin main
+```
+
+### Final Workflow for Users
+
+After cloning the repository, a new user would:
+
+1. Copy `terraform.tfvars.example` to `terraform.tfvars`.
+2. Edit `terraform.tfvars` to set up their own project-specific configurations.
+3. Run `terraform init` and `terraform apply` to deploy resources.
+
 ## License
 
 This project is licensed under the MIT License.

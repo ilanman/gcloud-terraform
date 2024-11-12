@@ -1,0 +1,8 @@
+# terraform.tfvars.example
+
+project_id           = "your-project-id"                          # User's Google Cloud project ID
+region               = "us-east4"                                 # Preferred region for deployment
+service_account_email = "your-service-account-email@appspot.gserviceaccount.com" # Service account email
+bucket_name          = "your-bucket-name"                         # Bucket name for the Cloud Function code
+source_zip_path      = "path/to/your/source.zip"                  # Path to the source zip file
+
