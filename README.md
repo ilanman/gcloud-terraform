@@ -1,6 +1,6 @@
 # GCP Trading Algorithm Infrastructure with Terraform
 
-This project sets up the infrastructure required to deploy a Google Cloud Function for a trading algorithm using Google Cloud Platform (GCP) resources. The setup includes a Google Cloud Storage bucket to store the function source code and a Cloud Function that triggers HTTP requests to run the trading algoriroject Structure
+This project sets up the infrastructure required to deploy a Google Cloud Function for a trading algorithm using Google Cloud Platform (GCP) resources. The setup includes a Google Cloud Storage bucket to store the function source code and a Cloud Function that triggers HTTP requests to run the function.
 
 - [Terraform Project overview](#terraform-project-overview)
 - [Github repo usage](#github-repo-usage)
